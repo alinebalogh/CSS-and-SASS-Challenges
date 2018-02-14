@@ -1,0 +1,24 @@
+/* Simple reset
+    Browser usually adds some margin and padding. We don't want it, so we reset;
+    Set box-sizing to border-box to avoid paddings and margins being added to the width/height total;
+*/
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+/* Setting font size in the root
+    Why 10px? To make my life easier when I'm converting to rem :)
+*/
+html{
+    //this defines what 1rem is
+    font-size: 62.5%;
+}
+
+/* Body with 30px padding to give a nice border */
+body{
+    box-sizing: border-box;
+}
