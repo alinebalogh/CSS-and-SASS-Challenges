@@ -1,5 +1,6 @@
 .btn{
 
+    &,
     &:link,
     &:visited{
     position: relative;
@@ -11,6 +12,11 @@
     border-radius: 10rem;
     transition: all .1s;
     font-size: $default-font-size;
+
+    //buttons
+
+    border: none;
+    cursor: pointer;
     
     }
 
@@ -23,7 +29,9 @@
         }
     }
         
-    &:active{
+    &:active,
+    &:focus{
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     }
@@ -32,6 +40,13 @@
         color: $color-grey-dark;
         &::after{
             background-color: $color-white;
+        }
+    }
+    &--green{
+        background-color:$color-primary;
+        color: $color-white;
+        &::after{
+            background-color: $color-primary;
         }
     }
     &::after{

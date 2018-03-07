@@ -2,11 +2,15 @@
     max-width: $grid-width;
     margin: 0 auto;    
 
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
     }
-
-    @include clearfix;
     // *=
     // Will select only the ones that ends with <word>
     // $=
